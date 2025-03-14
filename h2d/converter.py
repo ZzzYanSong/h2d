@@ -321,8 +321,8 @@ class H2D:
 
     def handle_tr(self, element, table, row_idx):
         cells = element.find_all(['td', 'th'])
-        if cells and table.columns.count < len(cells):
-            for _ in range(len(cells) - table.columns.count):
+        if cells and len(table.columns) < len(cells):
+            for _ in range(len(cells) - len(table.columns)):
                 table.add_column(Inches(1))
         for cell_idx, td in enumerate(cells):
             self.handle_td(td, table.cell(row_idx, cell_idx))

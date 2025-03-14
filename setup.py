@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="h2d",
-    version="0.1.0",
+    version="0.1.1",
     author="zzzyansong",
     author_email="i@zhuyansong.com",
     description="轻松将您的html转为docx格式",
